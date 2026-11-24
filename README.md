@@ -52,9 +52,12 @@ Import the repository in Vercel and deploy. No environment variables are require
 ```text
 src/
 ├─ index.html              App shell, icon sprite, import map
+├─ sitemap.xml             XML sitemap for search engine indexing
+├─ robots.txt              Crawler access rules and sitemap reference
 ├─ manifest.webmanifest    Installable web app metadata
 ├─ sw.js                   Offline app shell and asset caching
-├─ css/styles.css          Design system, glass surfaces, layout, motion
+├─ css/
+│  └─ styles.css           Design system, glass surfaces, layout, motion
 ├─ js/
 │  ├─ app.js               Bootstrap, state, units, geolocation, sharing
 │  ├─ api.js               Open-Meteo and BigDataCloud requests
@@ -72,7 +75,8 @@ src/
 │  ├─ fonts/               Self-hosted Inter (latin + latin-ext)
 │  ├─ icons/               App icons (SVG + PNG, incl. maskable)
 │  └─ weather/             Meteocons, animated and static
-└─ vendor/three/           Vendored Three.js build (MIT)
+└─ vendor/
+   └─ three/               Vendored Three.js build (MIT)
 ```
 
 ## Accessibility and performance notes
