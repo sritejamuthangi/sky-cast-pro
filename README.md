@@ -35,7 +35,7 @@ A specific place can be opened directly:
 
 Without a query string, SkyCast restores your last place or starts with Hyderabad.
 
-git clone [https://github.com/sriteja-28/SkyCast-Pro.git](https://github.com/sriteja-28/SkyCast-Pro.git)
+git clone [https://github.com/sriteja-28/sky-cast-pro.git](https://github.com/sriteja-28/sky-cast-pro.git)
 
 ## Deploy on Vercel
 
