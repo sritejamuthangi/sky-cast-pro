@@ -35,15 +35,11 @@ A specific place can be opened directly:
 
 Without a query string, SkyCast restores your last place or starts with Hyderabad.
 
-<<<<<<< HEAD
-git clone [https://github.com/your-username/weather-app.git](https://github.com/your-username/weather-app.git)
-cd weather-app
-Configure API Key:
-=======
+git clone [https://github.com/sriteja-28/SkyCast-Pro.git](https://github.com/sriteja-28/SkyCast-Pro.git)
+
 ## Deploy on Vercel
 
 The repository is already configured for Vercel in `vercel.json`:
->>>>>>> 68d90f2 (feat: enhance SkyCast Pro with 3D visuals, accessibility and performance optimizations)
 
 - **Framework preset:** none
 - **Build command:** none
