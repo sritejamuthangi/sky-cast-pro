@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "SkyCast: Weather at a glance",
+  "short_name": "SkyCast",
+  "description": "Hourly and 10-day forecasts, air quality, UV, sunrise and sunset, and plain-language tips for your day.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1636",
+  "theme_color": "#0b1636",
+  "categories": ["weather", "utilities"],
+  "icons": [
+    { "src": "assets/icons/icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

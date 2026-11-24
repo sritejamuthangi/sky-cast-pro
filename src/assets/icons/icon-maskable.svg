@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2=".35" y2="1">
+      <stop offset="0" stop-color="#6cb8ff"/>
+      <stop offset=".5" stop-color="#2f74e6"/>
+      <stop offset="1" stop-color="#1a3b93"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx=".3" cy="0" r=".9">
+      <stop offset="0" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sun" cx=".36" cy=".32" r=".75">
+      <stop offset="0" stop-color="#fff6c4"/>
+      <stop offset=".4" stop-color="#ffcb3d"/>
+      <stop offset="1" stop-color="#ff8f0f"/>
+    </radialGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#ffd36b" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#ffd36b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cloud" x1="0" y1="184" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#d3e1f6"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0a1f55" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <!-- Full-bleed background; artwork kept inside the central safe zone for maskable icons -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#sheen)"/>
+  <g transform="translate(256 256) scale(.72) translate(-272 -258)">
+    <circle cx="206" cy="206" r="150" fill="url(#glow)"/>
+    <circle cx="206" cy="206" r="92" fill="url(#sun)" filter="url(#shadow)"/>
+    <g fill="url(#cloud)" filter="url(#shadow)">
+      <circle cx="196" cy="330" r="70"/>
+      <circle cx="292" cy="282" r="98"/>
+      <circle cx="380" cy="338" r="62"/>
+      <rect x="196" y="300" width="184" height="100"/>
+    </g>
+  </g>
+</svg>
