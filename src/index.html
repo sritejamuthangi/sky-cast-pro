@@ -1,16 +1,42 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>SkyCast · Weather at a glance</title>
-  <meta name="description" content="SkyCast is a fast, beautiful weather app with hourly and 10-day forecasts, air quality, UV, sunrise and sunset, and plain-language tips for your day.">
+  
+  <title>SkyCast – Free Weather Forecast & Live Updates</title>
+  <meta name="description"
+    content="SkyCast is a free weather app with real-time weather updates, hourly and 10-day forecasts, air quality, UV index, sunrise, sunset and daily weather insights.">
+
+  <meta name="keywords"
+    content="SkyCast, free weather app, weather forecast, live weather updates, current weather, hourly weather forecast, 10-day weather forecast, local weather, weather by city, real-time temperature, air quality index, AQI, UV index, sunrise and sunset, wind speed, humidity, rain forecast, weather dashboard">
+
+  <meta name="author" content="Sri Teja Muthangi">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+
+  <link rel="canonical" href="https://skycastpro.sritejam.com/">
+
   <meta name="theme-color" content="#0b1636">
   <meta name="color-scheme" content="dark">
-  <meta property="og:title" content="SkyCast · Weather at a glance">
-  <meta property="og:description" content="Hourly and 10-day forecasts, air quality, UV and smart daily tips in a 3D glass design.">
+
+  <!-- google search console -->
+  <meta name="google-site-verification" content="7GFgyj3hNuBDaRPvpUKOPVaoirt9Wix0QrgsYU7zA2A">
+
+  <!-- open graph -->
+  <meta property="og:title" content="SkyCast – Free Weather Forecast App">
+  <meta property="og:description"
+    content="Get real-time weather updates, hourly and 10-day forecasts, air quality, UV index and daily weather insights.">
   <meta property="og:type" content="website">
-  <meta name="google-site-verification" content="7GFgyj3hNuBDaRPvpUKOPVaoirt9Wix0QrgsYU7zA2A" />
+  <meta property="og:url" content="https://skycastpro.sritejam.com/">
+  <meta property="og:site_name" content="SkyCast">
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SkyCast – Free Weather Forecast App">
+  <meta name="twitter:description"
+    content="Get real-time weather updates, hourly and 10-day forecasts, air quality and daily weather insights.">
 
   <link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
@@ -40,28 +66,92 @@
 <body class="is-loading">
   <!-- UI icon sprite. Paths adapted from Lucide (https://lucide.dev), ISC License. -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></symbol>
-    <symbol id="i-locate" viewBox="0 0 24 24"><path d="M3 11 22 2l-9 19-2-8-8-2z"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.8 2.85 5.78 6.38.93-4.62 4.5 1.09 6.35L12 17.36l-5.7 3 1.09-6.35-4.62-4.5 6.38-.93z"/></symbol>
-    <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol>
-    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m11 3 1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="m19 15 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
-    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M8 2.5v4M16 2.5v4M3 10h18"/></symbol>
-    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
-    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
-    <symbol id="i-wind" viewBox="0 0 24 24"><path d="M17.7 7.7A2.5 2.5 0 1 1 19.5 12H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></symbol>
-    <symbol id="i-sunrise" viewBox="0 0 24 24"><path d="M12 2v6M8 5l4-3 4 3M4.93 10.93l1.41 1.41M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M16 18a4 4 0 0 0-8 0"/></symbol>
-    <symbol id="i-sunset" viewBox="0 0 24 24"><path d="M12 9V2M8 6l4 3 4-3M4.93 10.93l1.41 1.41M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M16 18a4 4 0 0 0-8 0"/></symbol>
-    <symbol id="i-thermometer" viewBox="0 0 24 24"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></symbol>
-    <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></symbol>
-    <symbol id="i-umbrella" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 0-20 0Z"/><path d="M12 12v8a2 2 0 0 0 4 0"/><path d="M12 2v1"/></symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
-    <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></symbol>
-    <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
-    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
-    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
-    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.64-6.36L21 8"/><path d="M21 3v5h-5"/></symbol>
-    <symbol id="i-cloud-off" viewBox="0 0 24 24"><path d="m2 2 20 20"/><path d="M5.78 5.78A7 7 0 0 0 9 19h8.5a4.5 4.5 0 0 0 1.31-.2"/><path d="M21.53 16.5A4.5 4.5 0 0 0 17.5 10h-1.79A7 7 0 0 0 9.3 5.07"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.6-3.6" />
+    </symbol>
+    <symbol id="i-locate" viewBox="0 0 24 24">
+      <path d="M3 11 22 2l-9 19-2-8-8-2z" />
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="m12 2.8 2.85 5.78 6.38.93-4.62 4.5 1.09 6.35L12 17.36l-5.7 3 1.09-6.35-4.62-4.5 6.38-.93z" />
+    </symbol>
+    <symbol id="i-share" viewBox="0 0 24 24">
+      <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7" />
+      <path d="m16 6-4-4-4 4" />
+      <path d="M12 2v13" />
+    </symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24">
+      <path d="m11 3 1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z" />
+      <path d="m19 15 .8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z" />
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5l3.2 2" />
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24">
+      <rect x="3" y="4.5" width="18" height="16.5" rx="2.5" />
+      <path d="M8 2.5v4M16 2.5v4M3 10h18" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="4" />
+      <path
+        d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+    </symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24">
+      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+    </symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24">
+      <path d="M17.7 7.7A2.5 2.5 0 1 1 19.5 12H2" />
+      <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
+      <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
+    </symbol>
+    <symbol id="i-sunrise" viewBox="0 0 24 24">
+      <path
+        d="M12 2v6M8 5l4-3 4 3M4.93 10.93l1.41 1.41M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M16 18a4 4 0 0 0-8 0" />
+    </symbol>
+    <symbol id="i-sunset" viewBox="0 0 24 24">
+      <path
+        d="M12 9V2M8 6l4 3 4-3M4.93 10.93l1.41 1.41M2 18h2M20 18h2M19.07 10.93l-1.41 1.41M22 22H2M16 18a4 4 0 0 0-8 0" />
+    </symbol>
+    <symbol id="i-thermometer" viewBox="0 0 24 24">
+      <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
+    </symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24">
+      <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" />
+    </symbol>
+    <symbol id="i-umbrella" viewBox="0 0 24 24">
+      <path d="M22 12a10 10 0 0 0-20 0Z" />
+      <path d="M12 12v8a2 2 0 0 0 4 0" />
+      <path d="M12 2v1" />
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24">
+      <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+      <circle cx="12" cy="12" r="3" />
+    </symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24">
+      <path d="m12 14 4-4" />
+      <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+    </symbol>
+    <symbol id="i-chevron-left" viewBox="0 0 24 24">
+      <path d="m15 18-6-6 6-6" />
+    </symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24">
+      <path d="m9 18 6-6-6-6" />
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <path d="M18 6 6 18M6 6l12 12" />
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24">
+      <path d="M21 12a9 9 0 1 1-2.64-6.36L21 8" />
+      <path d="M21 3v5h-5" />
+    </symbol>
+    <symbol id="i-cloud-off" viewBox="0 0 24 24">
+      <path d="m2 2 20 20" />
+      <path d="M5.78 5.78A7 7 0 0 0 9 19h8.5a4.5 4.5 0 0 0 1.31-.2" />
+      <path d="M21.53 16.5A4.5 4.5 0 0 0 17.5 10h-1.79A7 7 0 0 0 9.3 5.07" />
+    </symbol>
   </svg>
 
   <!-- Living sky: gradient, drifting clouds, rain/snow/stars and lightning -->
@@ -86,7 +176,9 @@
       </a>
 
       <div class="search" id="search" role="search">
-        <svg class="i search-icon" aria-hidden="true"><use href="#i-search"></use></svg>
+        <svg class="i search-icon" aria-hidden="true">
+          <use href="#i-search"></use>
+        </svg>
         <input id="searchInput" type="search" placeholder="Search for a city" autocomplete="off" autocapitalize="words"
           spellcheck="false" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="searchList"
           aria-autocomplete="list" aria-label="Search for a city">
@@ -95,7 +187,9 @@
       </div>
 
       <button class="icon-btn" id="locateBtn" type="button" aria-label="Use my location" title="Use my location">
-        <svg class="i" aria-hidden="true"><use href="#i-locate"></use></svg>
+        <svg class="i" aria-hidden="true">
+          <use href="#i-locate"></use>
+        </svg>
       </button>
       <button class="icon-btn units-btn" id="unitsBtn" type="button" popovertarget="unitsPanel" aria-haspopup="dialog"
         aria-expanded="false" aria-label="°C, change units" title="Change units">
@@ -104,7 +198,9 @@
     </div>
 
     <div class="banner" id="banner" role="status" hidden>
-      <svg class="i" aria-hidden="true"><use href="#i-cloud-off"></use></svg>
+      <svg class="i" aria-hidden="true">
+        <use href="#i-cloud-off"></use>
+      </svg>
       <span id="bannerText"></span>
       <button type="button" class="banner-btn" id="bannerRetry">Retry</button>
     </div>
@@ -142,16 +238,24 @@
     <section class="hero" id="hero" aria-labelledby="placeName">
       <div class="hero-head">
         <p class="place-badge" id="placeBadge" hidden>
-          <svg class="i" aria-hidden="true"><use href="#i-locate"></use></svg> My location
+          <svg class="i" aria-hidden="true">
+            <use href="#i-locate"></use>
+          </svg> My location
         </p>
         <div class="place-row">
           <h1 class="place-name" id="placeName"><span class="skeleton sk-line" style="--w:9ch"></span></h1>
           <div class="place-actions">
-            <button class="icon-btn icon-btn--ghost save-btn" id="saveBtn" type="button" aria-pressed="false" aria-label="Save this city" title="Save this city">
-              <svg class="i" aria-hidden="true"><use href="#i-star"></use></svg>
+            <button class="icon-btn icon-btn--ghost save-btn" id="saveBtn" type="button" aria-pressed="false"
+              aria-label="Save this city" title="Save this city">
+              <svg class="i" aria-hidden="true">
+                <use href="#i-star"></use>
+              </svg>
             </button>
-            <button class="icon-btn icon-btn--ghost" id="shareBtn" type="button" aria-label="Share this forecast" title="Share">
-              <svg class="i" aria-hidden="true"><use href="#i-share"></use></svg>
+            <button class="icon-btn icon-btn--ghost" id="shareBtn" type="button" aria-label="Share this forecast"
+              title="Share">
+              <svg class="i" aria-hidden="true">
+                <use href="#i-share"></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -162,7 +266,8 @@
       </div>
 
       <div class="hero-visual" id="heroVisual">
-        <img class="hero-icon" id="heroIcon" src="assets/weather/static/partly-cloudy-day.svg" alt="" width="240" height="240">
+        <img class="hero-icon" id="heroIcon" src="assets/weather/static/partly-cloudy-day.svg" alt="" width="240"
+          height="240">
         <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
       </div>
 
@@ -176,56 +281,107 @@
 
     <nav class="saved" aria-label="Saved cities">
       <ul class="saved-list" id="savedList">
-        <li class="saved-empty"><svg class="i" aria-hidden="true"><use href="#i-star"></use></svg>Star a city to pin it here for quick access.</li>
+        <li class="saved-empty"><svg class="i" aria-hidden="true">
+            <use href="#i-star"></use>
+          </svg>Star a city to pin it here for quick access.</li>
       </ul>
     </nav>
 
     <div class="modules" id="modules">
       <section class="card hourly span-all" data-tilt="1" style="--i:0" aria-labelledby="hourlyTitle">
         <div class="card-head">
-          <h2 class="card-title" id="hourlyTitle"><svg class="i" aria-hidden="true"><use href="#i-clock"></use></svg>Next 24 hours</h2>
+          <h2 class="card-title" id="hourlyTitle"><svg class="i" aria-hidden="true">
+              <use href="#i-clock"></use>
+            </svg>Next 24 hours</h2>
           <div class="scroll-btns">
-            <button class="mini-btn" id="hourPrev" type="button" aria-label="Earlier hours" disabled><svg class="i" aria-hidden="true"><use href="#i-chevron-left"></use></svg></button>
-            <button class="mini-btn" id="hourNext" type="button" aria-label="Later hours"><svg class="i" aria-hidden="true"><use href="#i-chevron-right"></use></svg></button>
+            <button class="mini-btn" id="hourPrev" type="button" aria-label="Earlier hours" disabled><svg class="i"
+                aria-hidden="true">
+                <use href="#i-chevron-left"></use>
+              </svg></button>
+            <button class="mini-btn" id="hourNext" type="button" aria-label="Later hours"><svg class="i"
+                aria-hidden="true">
+                <use href="#i-chevron-right"></use>
+              </svg></button>
           </div>
         </div>
         <ol class="hourly-list" id="hourlyList" tabindex="0" aria-label="Hourly forecast">
-          <li class="skeleton sk-hour"></li><li class="skeleton sk-hour"></li><li class="skeleton sk-hour"></li><li class="skeleton sk-hour"></li><li class="skeleton sk-hour"></li><li class="skeleton sk-hour"></li>
+          <li class="skeleton sk-hour"></li>
+          <li class="skeleton sk-hour"></li>
+          <li class="skeleton sk-hour"></li>
+          <li class="skeleton sk-hour"></li>
+          <li class="skeleton sk-hour"></li>
+          <li class="skeleton sk-hour"></li>
         </ol>
       </section>
 
       <section class="card insights span-all" data-tilt="1" style="--i:1" aria-labelledby="tipsTitle">
-        <h2 class="card-title" id="tipsTitle"><svg class="i" aria-hidden="true"><use href="#i-sparkles"></use></svg>Today's tips</h2>
+        <h2 class="card-title" id="tipsTitle"><svg class="i" aria-hidden="true">
+            <use href="#i-sparkles"></use>
+          </svg>Today's tips</h2>
         <ul class="tips" id="tipsList">
-          <li class="skeleton sk-block"></li><li class="skeleton sk-block"></li><li class="skeleton sk-block"></li>
+          <li class="skeleton sk-block"></li>
+          <li class="skeleton sk-block"></li>
+          <li class="skeleton sk-block"></li>
         </ul>
       </section>
 
       <section class="card daily" data-tilt="1.6" style="--i:2" aria-labelledby="dailyTitle">
-        <h2 class="card-title" id="dailyTitle"><svg class="i" aria-hidden="true"><use href="#i-calendar"></use></svg>10-day forecast</h2>
+        <h2 class="card-title" id="dailyTitle"><svg class="i" aria-hidden="true">
+            <use href="#i-calendar"></use>
+          </svg>10-day forecast</h2>
         <ol class="daily-list" id="dailyList">
-          <li class="skeleton sk-row"></li><li class="skeleton sk-row"></li><li class="skeleton sk-row"></li><li class="skeleton sk-row"></li><li class="skeleton sk-row"></li>
-          <li class="skeleton sk-row"></li><li class="skeleton sk-row"></li><li class="skeleton sk-row"></li><li class="skeleton sk-row"></li><li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
+          <li class="skeleton sk-row"></li>
         </ol>
       </section>
 
       <h2 class="sr-only">Current conditions</h2>
-      <article class="card tile tile-wide" id="tileAqi" data-tilt="2.5" style="--i:3"><div class="skeleton sk-tile"></div></article>
-      <article class="card tile" id="tileUv" data-tilt="4" style="--i:4"><div class="skeleton sk-tile"></div></article>
-      <article class="card tile" id="tileWind" data-tilt="4" style="--i:5"><div class="skeleton sk-tile"></div></article>
-      <article class="card tile" id="tileSun" data-tilt="4" style="--i:6"><div class="skeleton sk-tile"></div></article>
-      <article class="card tile" id="tileFeels" data-tilt="4" style="--i:7"><div class="skeleton sk-tile"></div></article>
-      <article class="card tile" id="tileHumidity" data-tilt="4" style="--i:8"><div class="skeleton sk-tile"></div></article>
-      <article class="card tile" id="tilePrecip" data-tilt="4" style="--i:9"><div class="skeleton sk-tile"></div></article>
-      <article class="card tile" id="tileVisibility" data-tilt="4" style="--i:10"><div class="skeleton sk-tile"></div></article>
-      <article class="card tile" id="tilePressure" data-tilt="4" style="--i:11"><div class="skeleton sk-tile"></div></article>
+      <article class="card tile tile-wide" id="tileAqi" data-tilt="2.5" style="--i:3">
+        <div class="skeleton sk-tile"></div>
+      </article>
+      <article class="card tile" id="tileUv" data-tilt="4" style="--i:4">
+        <div class="skeleton sk-tile"></div>
+      </article>
+      <article class="card tile" id="tileWind" data-tilt="4" style="--i:5">
+        <div class="skeleton sk-tile"></div>
+      </article>
+      <article class="card tile" id="tileSun" data-tilt="4" style="--i:6">
+        <div class="skeleton sk-tile"></div>
+      </article>
+      <article class="card tile" id="tileFeels" data-tilt="4" style="--i:7">
+        <div class="skeleton sk-tile"></div>
+      </article>
+      <article class="card tile" id="tileHumidity" data-tilt="4" style="--i:8">
+        <div class="skeleton sk-tile"></div>
+      </article>
+      <article class="card tile" id="tilePrecip" data-tilt="4" style="--i:9">
+        <div class="skeleton sk-tile"></div>
+      </article>
+      <article class="card tile" id="tileVisibility" data-tilt="4" style="--i:10">
+        <div class="skeleton sk-tile"></div>
+      </article>
+      <article class="card tile" id="tilePressure" data-tilt="4" style="--i:11">
+        <div class="skeleton sk-tile"></div>
+      </article>
     </div>
 
     <section class="card error-card" id="errorCard" hidden>
-      <svg class="i error-icon" aria-hidden="true"><use href="#i-cloud-off"></use></svg>
+      <svg class="i error-icon" aria-hidden="true">
+        <use href="#i-cloud-off"></use>
+      </svg>
       <h2>We couldn't load the weather</h2>
       <p id="errorText">Check your connection and try again.</p>
-      <button type="button" class="pill-btn" id="errorRetry"><svg class="i" aria-hidden="true"><use href="#i-refresh"></use></svg>Try again</button>
+      <button type="button" class="pill-btn" id="errorRetry"><svg class="i" aria-hidden="true">
+          <use href="#i-refresh"></use>
+        </svg>Try again</button>
     </section>
   </main>
 
@@ -249,4 +405,5 @@
     <p class="noscript">SkyCast needs JavaScript to fetch the forecast. Please enable it and reload.</p>
   </noscript>
 </body>
+
 </html>
